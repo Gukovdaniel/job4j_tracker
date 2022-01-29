@@ -9,6 +9,7 @@ public class Error {
     boolean active;
     int status;
     String message;
+
     public Error() {
     }
 

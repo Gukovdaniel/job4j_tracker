@@ -23,7 +23,7 @@ public class Error {
     }
 
     public static void main(String[] args) {
-        Error error2 = new Error(true,5,"Go!");
+        Error error2 = new Error(true, 5, "Go!");
         error2.printInfo();
     }
 }

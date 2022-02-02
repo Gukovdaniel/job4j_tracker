@@ -25,9 +25,9 @@ public class Calculator {
     }
 
     public static void main(String[] args) {
-        int result = Calculator.sum(10); //вызов статической переменной
+        int result = Calculator.sum(10); /*вызов статической переменной*/
         System.out.println(result);
-        Calculator calculator = new Calculator(); //вызов нестатической переменной
+        Calculator calculator = new Calculator(); /*вызов нестатической переменной*/
         int rsl = calculator.multiply(5);
         System.out.println(rsl);
         int res = Calculator.min(6);

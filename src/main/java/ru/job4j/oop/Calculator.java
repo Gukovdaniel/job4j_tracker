@@ -20,7 +20,7 @@ public class Calculator {
        return d / x;
     }
 
-    public void sumAllOperation (int o) {
+    public void sumAllOperation(int o) {
         return;
     }
 
@@ -37,7 +37,4 @@ public class Calculator {
         System.out.println(rzt);
 
     }
-}//public static void main(String[] args) {
-   // Calculator calculator = new Calculator(); //вызов нестатической переменной
-   // int rsl = calculator.multiply(5);
-   // System.out.println(rsl);
+}

@@ -20,7 +20,7 @@ public class Calculator {
        return d / x;
     }
 
-    public void sumAllOperation(int o) {
+    public int sumAllOperation(int o) {
         return (sum(o) + multiply(o) + min(o) + divide(o));
     }
 
@@ -36,7 +36,7 @@ public class Calculator {
         int rzt = calculator1.divide(10);
         System.out.println(rzt);
         Calculator calculator2 = new Calculator();
-        int ram = calculator2.sumAllOperation();
+        int ram = calculator2.sumAllOperation(20);
         System.out.println(ram);
     }
 }

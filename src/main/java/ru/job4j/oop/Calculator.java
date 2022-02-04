@@ -21,7 +21,7 @@ public class Calculator {
     }
 
     public void sumAllOperation(int o) {
-        return;
+        return (sum(o) + multiply(o) + min(o) + divide(o));
     }
 
     public static void main(String[] args) {
@@ -35,6 +35,8 @@ public class Calculator {
         Calculator calculator1 = new Calculator();
         int rzt = calculator1.divide(10);
         System.out.println(rzt);
-
+        Calculator calculator2 = new Calculator();
+        int ram = calculator2.sumAllOperation();
+        System.out.println(ram);
     }
 }

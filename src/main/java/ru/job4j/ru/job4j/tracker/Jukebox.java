@@ -1,4 +1,4 @@
-package ru.job4j.tracker;
+package ru.job4j.ru.job4j.tracker;
 
 public class Jukebox {
     public void music(int position) {

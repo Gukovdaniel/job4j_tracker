@@ -9,6 +9,4 @@ public class Programmer extends Engineer {
         this.comp = comp;
 
     }
-
-
 }

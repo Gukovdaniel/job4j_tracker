@@ -8,7 +8,6 @@ public class Dentist extends Doctor {
 
     public Dentist(String name, String surname, boolean education, int birthday) {
         super(name, surname, education, birthday);
+
     }
-
-
 }

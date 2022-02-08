@@ -15,6 +15,19 @@ public class Profession {
     }
 
     public void getName() {
+        return;
+
+    }
+
+    public void getSurname() {
+
+    }
+
+    public void getEd() {
+
+    }
+
+    public void getBirth() {
 
     }
 

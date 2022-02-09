@@ -6,7 +6,7 @@ import java.time.format.DateTimeFormatter;
 public class UsagePackageDate {
     public static void main(String[] args) {
         LocalDateTime currentDateTime = LocalDateTime.now();
-        System.out.println("Дата и время до форматирования " + currentDateTime );
+        System.out.println("Дата и время до форматирования " + currentDateTime);
 
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MMM-yyyy HH:mm:ss");
         String currentDateTimeFormat = currentDateTime.format(formatter);

@@ -10,4 +10,5 @@ public class Dentist extends Doctor {
         super(name, surname, education, birthday);
 
     }
+
 }

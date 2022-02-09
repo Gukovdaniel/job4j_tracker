@@ -8,6 +8,7 @@ public class Config {
     public Config(String name) {
         this.name = name;
     }
+
     public void print() {
         System.out.println(position);
     }
@@ -15,6 +16,7 @@ public class Config {
     public String getProperties(String key) {
         return search(key);
     }
+
     public String search(String key) {
         return key;
     }

@@ -20,5 +20,4 @@ public class Config {
     public String search(String key) {
         return key;
     }
-
 }

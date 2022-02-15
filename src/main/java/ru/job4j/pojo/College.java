@@ -4,7 +4,8 @@ import java.util.Date;
 
 public class College {
     public static void main(String[] args) {
-        Student student = new Student();
+        Student student;
+        student = new Student();
         student.setFio("Иванов Иван Иванович; ");
         student.setNumber(3);
         student.setCreated(new Date());

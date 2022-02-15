@@ -11,4 +11,9 @@ public class Dentist extends Doctor {
 
     }
 
+    public void tratment() {
+
+    }
 }
+
+

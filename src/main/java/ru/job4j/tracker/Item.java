@@ -5,7 +5,7 @@ import java.time.format.DateTimeFormatter;
 
 public class Item {
 
-    private LocalDateTime created = LocalDateTime.now();
+    private LocalDateTime created;
 
     private int id;
 
@@ -24,7 +24,7 @@ public class Item {
         this.name = name;
     }
 
-    public LocalDateTime getCreated(DateTimeFormatter formatter) {
+    public LocalDateTime getCreated() {
         return created;
     }
 

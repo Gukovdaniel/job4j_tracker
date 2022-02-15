@@ -15,8 +15,6 @@ public class Item {
 
     }
 
-
-
     public Item(String name) {
         this.name = name;
     }
@@ -45,6 +43,4 @@ public class Item {
     public void setName(String name) {
         this.name = name;
     }
-
-
 }

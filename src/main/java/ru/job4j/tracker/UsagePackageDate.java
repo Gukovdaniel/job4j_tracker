@@ -4,13 +4,17 @@ import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
 public class UsagePackageDate {
-    public static void main(String[] args) {
-        LocalDateTime currentDateTime = LocalDateTime.now();
-        System.out.println("Дата и время до форматирования " + currentDateTime);
 
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MMM-yyyy HH:mm:ss");
-        String currentDateTimeFormat = currentDateTime.format(formatter);
-        System.out.println("Текущие дата и время после форматирования: " + currentDateTimeFormat);
+    public static void main(String[] args) {
+
+
+        Item item = new Item();
+        item.getCreated();
+
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MMMM-EEEE-yyyy HH:mm:ss");
+        String currentDateTimeFormat = item.getCreated();
+        System.out.println(currentDateTimeFormat);
+
     }
 
 }

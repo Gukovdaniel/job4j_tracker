@@ -9,7 +9,6 @@ public class Book {
         this.page = page;
     }
 
-
     public boolean equals(Object obj) {
         Book otherBook = (Book) obj;
 

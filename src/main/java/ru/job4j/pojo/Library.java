@@ -29,7 +29,7 @@ public class Library {
 
         for (int i = 0; i < bk.length; i++) {
             Book b = bk[i];
-            if (Objects.equals(b, book)){
+            if (Objects.equals(b, book)) {
                 System.out.println();
                 System.out.println(b.getName() + " - " + b.getPage());
             }

@@ -4,9 +4,9 @@ import java.util.Objects;
 
 public class Library {
     public static void main(String[] args) {
-        Book book = new Book("Clean code", 3);
+        Book book = new Book("Clean code", 300);
         Book book1 = new Book("Java 8. Полное руководство", 1376);
-        Book book2 = new Book("Библиотека профессионала", 1200);
+        Book book2 = new Book("Clean code", 300);
         Book book3 = new Book("Head First Java", 900);
         Book[] bk = new Book[4];
         bk[0] = book;
@@ -16,8 +16,8 @@ public class Library {
         for (int index = 0; index < bk.length; index++) {
             Book b = bk[index];
             System.out.println(b.getName() + " - " + b.getPage());
-            System.out.println();
         }
+        System.out.println();
 
             Book temp = bk[0];
             bk[0] = bk[3];
@@ -26,14 +26,15 @@ public class Library {
             Book b = bk[index];
             System.out.println(b.getName() + " - " + b.getPage());
         }
+        System.out.println();
 
-        for (int i = 0; i < bk.length; i++) {
-            Book b = bk[i];
-            if (Objects.equals(b, book)) {
-                System.out.println();
+        for (int index = 0; index < bk.length; index++) {
+            Book b = bk[index];
+            if (b.equals(book)) {
                 System.out.println(b.getName() + " - " + b.getPage());
             }
         }
     }
 }
+
 

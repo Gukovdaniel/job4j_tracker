@@ -6,7 +6,7 @@ public class Library {
     public static void main(String[] args) {
         Book book = new Book("Clean code", 300);
         Book book1 = new Book("Java 8. Полное руководство", 1376);
-        Book book2 = new Book("Clean code", 300);
+        Book book2 = new Book("Совершенный код", 1000);
         Book book3 = new Book("Head First Java", 900);
         Book[] bk = new Book[4];
         bk[0] = book;
@@ -30,7 +30,7 @@ public class Library {
 
         for (int index = 0; index < bk.length; index++) {
             Book b = bk[index];
-            if (b.getName().equals(book.getName())) {
+            if ("Clean code".equals(b.getName())) {
                 System.out.println(b.getName() + " - " + b.getPage());
             }
         }

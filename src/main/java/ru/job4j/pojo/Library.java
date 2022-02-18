@@ -30,7 +30,7 @@ public class Library {
 
         for (int index = 0; index < bk.length; index++) {
             Book b = bk[index];
-            if (b.equals(book)) {
+            if (b.getName().equals(book.getName())) {
                 System.out.println(b.getName() + " - " + b.getPage());
             }
         }

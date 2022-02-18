@@ -8,13 +8,7 @@ public class Book {
         this.name = name;
         this.page = page;
     }
-
-    public boolean equals(Object obj) {
-        Book otherBook = (Book) obj;
-
-        return this.name == otherBook.name;
-    }
-
+    
     public String getName() {
         return name;
     }

@@ -68,10 +68,10 @@ public class Tracker {
         int index = indexOf(id);
         int start = index + 1;
         int distPos = index;
-        int lenght = size - index -1;
+        int lenght = size - index - 1;
         items[size - 1] = null;
         size--;
-        System.arraycopy(items, start, items, distPos,lenght);
+        System.arraycopy(items, start, items, distPos, lenght);
 
         return false;
     }

@@ -68,6 +68,6 @@ public class Tracker {
             size--;
             System.arraycopy(items, start, items, distPos, lenght);
         }
-        return rsl;
+         return rsl;
     }
 }

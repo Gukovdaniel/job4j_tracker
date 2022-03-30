@@ -43,15 +43,8 @@ public class Tracker {
     }
 
     public Item findById(int id) {
-        Item item = null;
-        for (int index = 0; index < size; index++) {
-           Item current = items[index];
-           if (current.getId() == id) {
-               item = current;
-               break;
-           }
-        }
-        return item;
+        int index = indexOf(id);
+        return index != -1 ? items[index] : null;
     }
 
     public boolean replace(int id, Item item) {

@@ -4,7 +4,7 @@ import java.time.LocalDateTime;
 
 public class Item {
 
-    private LocalDateTime created = LocalDateTime.now();
+    private static final  LocalDateTime created = LocalDateTime.now();
 
     private int id;
 
@@ -43,4 +43,12 @@ public class Item {
         this.name = name;
     }
 
+
+    @Override
+    public String toString() {
+        return "Item{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                '}';
+    }
 }

@@ -6,7 +6,7 @@ public class UserStore {
         System.out.println("User: "
         + user.getId() + " "
         + user.getUsername() + " "
-        +user.getPassword()
+        + user.getPassword()
         );
         System.out.println(user.toString());
     }

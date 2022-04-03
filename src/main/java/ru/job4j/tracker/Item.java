@@ -26,7 +26,6 @@ public class Item {
         this.name = name;
     }
 
-
     public int getId() {
         return this.id;
     }
@@ -55,6 +54,7 @@ public class Item {
     public void setCreated(LocalDateTime created) {
         this.created = created;
     }
+
     public LocalDateTime getCreated() {
         return created;
     }

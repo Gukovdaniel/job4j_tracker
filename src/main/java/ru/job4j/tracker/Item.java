@@ -11,7 +11,11 @@ public class Item {
 
     private String name;
 
-    private LocalDateTime created;
+    private final LocalDateTime created;
+
+    {
+        created = LocalDateTime.now();
+    }
 
     public  Item() {
 
@@ -42,6 +46,10 @@ public class Item {
         this.name = name;
     }
 
+    public LocalDateTime getCreated() {
+        return created;
+    }
+
     @Override
     public String toString() {
         return "Item{"
@@ -49,13 +57,5 @@ public class Item {
                 + ", name='" + name + '\''
                 + ", created=" + created.format(FORMATTER)
                 + '}';
-    }
-
-    public void setCreated(LocalDateTime created) {
-        this.created = created;
-    }
-
-    public LocalDateTime getCreated() {
-        return created;
     }
 }

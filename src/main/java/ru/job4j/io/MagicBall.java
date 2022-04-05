@@ -12,7 +12,7 @@ import java.util.Random;
             System.out.println(name + ", What do you want to know?");
             String qu = q.nextLine();
             int ans = new Random().nextInt(3);
-            if(ans == 0) {
+            if (ans == 0) {
                 System.out.println("Yes!");
             } else if (ans == 1) {
                 System.out.println("No...");

@@ -1,6 +1,6 @@
 package ru.job4j.poly;
 
-public interface Transport {
+public interface Transport{
     String drive();
 
     int people(int p);

@@ -11,11 +11,7 @@ public class Item {
 
     private String name;
 
-    private final LocalDateTime created;
-
-    {
-        created = LocalDateTime.now();
-    }
+    private final LocalDateTime created = LocalDateTime.now();
 
     public  Item() {
     }

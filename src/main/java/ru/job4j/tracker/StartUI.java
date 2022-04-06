@@ -51,13 +51,12 @@ public class StartUI {
                 System.out.print("Enter id: ");
                 int id = Integer.parseInt(scanner.nextLine());
                 Item item = tracker.findById(id);
-                if (item != null ) {
+                if (item != null) {
                     System.out.println(item);
                 } else {
                     System.out.println("Заявка с введенным id: " + id + " не найдена");
                 }
-            }
-            else if (select == 6) {
+            } else if (select == 6) {
                 run = false;
             }  else {
                     System.out.println("Хранилище еще не содержит заявок");

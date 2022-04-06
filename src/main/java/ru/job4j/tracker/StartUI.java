@@ -24,8 +24,11 @@ public class StartUI {
                     for (Item item : items) {
                         System.out.println(item);
                     }
+                } else {
+                    System.out.println("Хранилище еще не содержит заявок");
                 }
-            } else if (select == 2) {
+            }
+            else if (select == 2) {
                 System.out.println("=== Edit item ===");
                 System.out.print("Enter id: ");
                 int id = Integer.parseInt(scanner.nextLine());
@@ -70,11 +73,9 @@ public class StartUI {
                 }
             } else if (select == 6) {
                 run = false;
-            }  else {
-                    System.out.println("Хранилище еще не содержит заявок");
-                }
             }
         }
+    }
 
         private void showMenu() {
         String[] menu = {

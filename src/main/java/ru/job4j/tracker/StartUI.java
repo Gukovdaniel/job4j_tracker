@@ -17,16 +17,17 @@ public class StartUI {
         Item item = new Item(name);
         if (tracker.replace(id, item)) {
             System.out.println("Заявка изменена успешно!");
-        } else
-        System.out.println("Ошибка замены заявки");
+        } else {
+            System.out.println("Ошибка замены заявки");
+        }
     }
 
     public static void deleteItem(Input input, Tracker tracker) {
         System.out.println("=== Delete the Item ===");
         int id = input.askInt("Enter id: ");
         if (tracker.delete(id)) {
-        System.out.println("Заявка удалена успешно! ");
-        }else {
+            System.out.println("Заявка удалена успешно! ");
+        } else {
             System.out.println("Ошибка удаления заявки!!!");
         }
     }

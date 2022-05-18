@@ -25,11 +25,7 @@ public class StartUI {
     public static void deleteItem(Input input, Tracker tracker) {
         System.out.println("=== Delete the Item ===");
         int id = input.askInt("Enter id: ");
-        if (tracker.delete(id)) {
-            System.out.println("Заявка удалена успешно! ");
-        } else {
-            System.out.println("Ошибка удаления заявки!!!");
-        }
+        tracker.delete(id);
     }
 
     public static void findByName(Input input, Tracker tracker) {
@@ -72,7 +68,7 @@ public class StartUI {
         boolean run = true;
         while (run) {
             this.showMenu();
-            int select = input.askInt("Введите команду: ");
+            int select = input.askInt("Enter command!: ");
             if (select == 0) {
                 StartUI.createItem(input, tracker);
             } else if (select == 1) {

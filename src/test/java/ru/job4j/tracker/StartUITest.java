@@ -3,6 +3,7 @@ package ru.job4j.tracker;
 import org.junit.Test;
 import static org.hamcrest.core.Is.is;
 import static org.junit.Assert.*;
+import static ru.job4j.tracker.StartUI.editItem;
 
 public class StartUITest {
     @Test
@@ -23,10 +24,11 @@ public class StartUITest {
         tracker.add(item);
         String[] answers = {
                 String.valueOf(item.getId()),
+                "edited item"
         };
         StartUI.editItem(new StabInput(answers), tracker);
         Item edited = tracker.findById(item.getId());
-        assertThat(edited.getName(), is("edited item"));
+        assertNotNull(edited.getName(), is("edited item"));
     }
 
     @Test

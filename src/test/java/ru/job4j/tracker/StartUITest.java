@@ -28,7 +28,7 @@ public class StartUITest {
         };
         StartUI.editItem(new StabInput(answers), tracker);
         Item edited = tracker.findById(item.getId());
-        assertNotNull(edited.getName(), is("edited item"));
+        assertThat(edited.getName(), is("edited item"));
     }
 
     @Test

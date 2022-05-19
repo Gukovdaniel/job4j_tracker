@@ -2,14 +2,6 @@ package ru.job4j.tracker;
 
 public class StartUI {
 
-    public static void createItem(Input input, Tracker tracker) {
-        System.out.println("=== Create a new Item ===");
-        String name = input.askStr("Enter name: ");
-        Item item = new Item(name);
-        tracker.add(item);
-        System.out.println("Добавленная заявка: " + item);
-    }
-
     public static void editItem(Input input, Tracker tracker) {
         System.out.println("=== Edit the Item ===");
         int id = input.askInt("Enter id: ");
@@ -56,30 +48,19 @@ public class StartUI {
         }
     }
 
-    public static void showAll(Input input, Tracker tracker) {
-        System.out.println("=== Show all items ===");
-        Item[] items = tracker.findAll();
-        if (items.length > 0) {
-            for (Item item : items) {
-                System.out.println(item);
-            }
-        } else {
-            System.out.println("Хранилище еще не содержит заявок");
-        }
-    }
-
     public void init(Input input, Tracker tracker, UserAction[] actions) {
         boolean run = true;
         while (run) {
             showMenu(actions);
             int select = input.askInt("Select: ");
             UserAction action = actions[select];
-            run = action.execute(input, tracker);
+            if (action.execute(input, tracker)) run = true;
+            else run = false;
         }
     }
 
     private void showMenu(UserAction[] actions) {
-        System.out.println("Menu.");
+        System.out.println("Menu");
         for (int index = 0; index < actions.length; index++) {
             System.out.println(index + ". " + actions[index].name());
         }

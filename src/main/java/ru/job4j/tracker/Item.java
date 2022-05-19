@@ -13,7 +13,7 @@ public class Item {
 
     private final LocalDateTime created = LocalDateTime.now();
 
-    public  Item() {
+    public  Item(int id) {
     }
 
     public Item(String name) {
@@ -23,6 +23,10 @@ public class Item {
     public Item(int id, String name) {
         this.id = id;
         this.name = name;
+    }
+
+    public Item() {
+
     }
 
     public int getId() {

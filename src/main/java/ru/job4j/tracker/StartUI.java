@@ -8,11 +8,7 @@ public class StartUI {
             showMenu(actions);
             int select = input.askInt("Select: ");
             UserAction action = actions[select];
-            if (action.execute(input, tracker)) {
-                run = true;
-            } else {
-                run = false;
-            }
+            run = action.execute(input, tracker);
         }
     }
 
@@ -32,7 +28,8 @@ public class StartUI {
                 new EditAction(),
                 new FindByNameAction(),
                 new FindByIdAction(),
-                new ShowAllAction()
+                new ShowAllAction(),
+                new ExitProgramAction()
         };
 
         new StartUI().init(input, tracker, actions);

@@ -15,13 +15,11 @@ public class FindEl extends Exception {
 
     public static void main(String[] args) {
         try {
-            String value[] = {"Petr", "Daniil", "Igor"};
+            String[] value = {"Petr", "Daniil", "Igor"};
             System.out.println(indexOf(value, "Daniil"));
         } catch (IllegalArgumentException e) {
             e.printStackTrace();
         }
-
-
     }
 }
 

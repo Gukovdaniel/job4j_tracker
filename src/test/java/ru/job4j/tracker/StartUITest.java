@@ -22,7 +22,6 @@ public class StartUITest {
         assertThat(tracker.findAll()[0].getName(), is("Item name"));
     }
 
-
     @Test
     public void whenReplaceItem() {
         Input in = new StabInput(

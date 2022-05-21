@@ -16,7 +16,7 @@ public class FindEl extends Exception {
     public static void main(String[] args) {
         try {
             String[] value = {"Petr", "Daniil", "Igor"};
-            System.out.println(indexOf(value, "Daniil"));
+            System.out.println(indexOf(value, "Danil"));
         } catch (IllegalArgumentException e) {
             e.printStackTrace();
         }

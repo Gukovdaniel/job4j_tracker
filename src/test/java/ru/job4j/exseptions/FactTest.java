@@ -2,12 +2,14 @@ package ru.job4j.exseptions;
 
 import org.junit.Test;
 
+import static org.hamcrest.CoreMatchers.is;
+import static org.junit.Assert.assertThat;
+
 public class FactTest {
 
-    public class TestCalc {
-        @Test(expected = IllegalArgumentException.class)
+        @Test
         public void whenFactorialLessZero() {
-            Fact.calc(3);
+            int rsl = Fact.calc(3);
+            assertThat(rsl, is(6));
         }
     }
-}

@@ -21,18 +21,4 @@ public class StartUITest {
         new StartUI().init(in, tracker, actions);
         assertThat(tracker.findAll()[0].getName(), is("Item name"));
     }
-
-    @Test
-    public void whenReplaceItem() {
-        Input in = new StabInput(
-                new String[] {"0", "Item name", "1"}
-        );
-        Tracker tracker = new Tracker();
-        UserAction[] actions = {
-                new EditAction(),
-                new ExitProgramAction()
-        };
-        new StartUI().init(in, tracker, actions);
-        assertThat(tracker.findAll()[0].getName(), is("Item name"));
-    }
 }

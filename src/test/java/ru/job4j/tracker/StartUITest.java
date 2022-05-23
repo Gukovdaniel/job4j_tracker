@@ -27,10 +27,10 @@ public class StartUITest {
         Item item = tracker.add(new Item("New item name"));
         String replacedName = "New item name";
         Input in = new StabInput(
-                new String[] {"0", String.valueOf(item.getId()), "1"}
+                new String[] {"0", String.valueOf(item.getId()), String.valueOf(item.getName()), "1"}
         );
+
         UserAction[] actions = {
-                new CreateAction(),
                 new EditAction(),
                 new ExitProgramAction()
         };

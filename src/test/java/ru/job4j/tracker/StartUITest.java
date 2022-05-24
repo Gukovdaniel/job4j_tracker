@@ -24,10 +24,10 @@ public class StartUITest {
     @Test
     public void whenReplaceItem() {
         Tracker tracker = new Tracker();
-        Item item = tracker.add(new Item("New item name"));
+        Item item = tracker.add(new Item("Replaced Item"));
         String replacedName = "New item name";
         Input in = new StabInput(
-                new String[] {"0", String.valueOf(item.getId()), String.valueOf(item.getName()), "1"}
+                new String[] {"0", String.valueOf(item.getId()), replacedName, "1"}
         );
 
         UserAction[] actions = {

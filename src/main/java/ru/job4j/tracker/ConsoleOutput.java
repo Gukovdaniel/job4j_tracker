@@ -1,4 +1,4 @@
-/*package ru.job4j.tracker;
+package ru.job4j.tracker;
 
 public class ConsoleOutput implements Output{
     @Override
@@ -6,4 +6,3 @@ public class ConsoleOutput implements Output{
         System.out.println(obj);
     }
 }
-*/

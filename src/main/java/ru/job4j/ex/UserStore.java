@@ -4,9 +4,8 @@ public class UserStore {
 
     public static User findUser(User[] users, String login) throws UserNotFoundException {
         int rsl = -1;
-        for (int i = 0; i < users.length; i++) {
-            if (login.equals(users[i])) {
-                rsl = i;
+        for (User i : users) {
+            if (i.getUsername().equals(login)) {
                 break;
             }
         }
@@ -18,11 +17,9 @@ public class UserStore {
 
 
     public static boolean validate(User user) throws UserInvalidException {
-        if (String.length(user) < 3) {
-            throw new UserInvalidException("Имя меньше трех символов");
-        } if (user.isValid()) {
-               throw new UserInvalidException("Пользователь не валидный!");
-            }
+        if (!user.isValid() || user.getUsername().length() <= 3) {
+            throw new UserInvalidException("User is not valid and shorter than three symbols!");
+        }
         return false;
     }
 
@@ -30,9 +27,16 @@ public class UserStore {
         User[] users = {
                 new User("Petr Arsentev", true)
         };
-        User user = findUser(users, "Petr Arsentev");
-        if (validate(user)) {
-            System.out.println("This user has an access");
+
+        try {
+            User user = findUser(users, "Petr Arsentev");
+
+        } catch ( UserNotFoundException us) {
+            us.printStackTrace();
+
+        }
+            if (validate(user)) {
+                System.out.println("This user has an access");
         }
     }
 }

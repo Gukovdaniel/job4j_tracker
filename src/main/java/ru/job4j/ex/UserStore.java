@@ -15,7 +15,6 @@ public class UserStore {
         return null;
     }
 
-
     public static boolean validate(User user) throws UserInvalidException {
         if (!user.isValid() || user.getUsername().length() <= 3) {
             throw new UserInvalidException("User is not valid and shorter than three symbols!");
@@ -23,20 +22,16 @@ public class UserStore {
         return false;
     }
 
-        public static void main(String[] args) {
+    public static void main(String[] args) throws UserNotFoundException {
         User[] users = {
                 new User("Petr Arsentev", true)
         };
-
-        try {
-            User user = findUser(users, "Petr Arsentev");
-
-        } catch ( UserNotFoundException us) {
-            us.printStackTrace();
-
-        }
-            if (validate(user)) {
-                System.out.println("This user has an access");
+        User user = findUser(users, "Petr Arsentev");
+        try {validate(user);
+            System.out.println("This user has an access");
+        }catch (Exception e){
+            System.out.println("This user not valid");
         }
     }
 }
+

@@ -29,7 +29,7 @@ public class UserStore {
         User user = findUser(users, "Petr Arsentev");
         try {
             if (validate(user)) {
-                System.out.println("This user has an access");
+                System.out.println("This user has an access ");
             }
         } catch (Exception ec) {
             ec.printStackTrace();

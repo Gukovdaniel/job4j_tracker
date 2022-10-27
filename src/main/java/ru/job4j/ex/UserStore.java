@@ -27,10 +27,12 @@ public class UserStore {
                 new User("Petr Arsentev", true)
         };
         User user = findUser(users, "Petr Arsentev");
-        try {validate(user);
-            System.out.println("This user has an access");
-        }catch (Exception e){
-            System.out.println("This user not valid");
+        try {
+            if (validate(user)) {
+                System.out.println("This user has an access");
+            }
+        } catch (Exception ec) {
+            ec.printStackTrace();
         }
     }
 }

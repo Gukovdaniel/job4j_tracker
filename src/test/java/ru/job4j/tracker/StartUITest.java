@@ -12,7 +12,7 @@ public class StartUITest {
         );
         Tracker tracker = new Tracker();
         UserAction[] actions = {
-                new CreateAction(),
+                new CreateAction(out),
                 new ExitProgramAction()
         };
         new StartUI(out).init(in, tracker, actions);

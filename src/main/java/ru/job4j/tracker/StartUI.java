@@ -19,7 +19,6 @@ public class StartUI {
             }
             UserAction action = actions[select];
             run = action.execute(input, tracker);
-
         }
     }
 
@@ -36,11 +35,11 @@ public class StartUI {
         Tracker tracker = new Tracker();
         UserAction[] actions = {
                 new CreateAction(output),
-                new DeleteAction(),
-                new EditAction(),
-                new FindByNameAction(),
-                new FindByIdAction(),
-                new ShowAllAction(),
+                new DeleteAction(output),
+                new EditAction(output),
+                new FindByNameAction(output),
+                new FindByIdAction(output),
+                new ShowAllAction(output),
                 new ExitProgramAction()
         };
         new StartUI(output).init(input, tracker, actions);

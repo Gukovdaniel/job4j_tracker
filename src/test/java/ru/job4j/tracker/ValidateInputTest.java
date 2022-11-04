@@ -39,6 +39,7 @@ public class ValidateInputTest {
         int selected = input.askInt("Enter menu:");
         assertThat(selected, is(1));
     }
+
     @Test
     public void whenNegativeInput() {
         Output out = new StubOutput();

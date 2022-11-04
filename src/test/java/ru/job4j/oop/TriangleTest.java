@@ -7,7 +7,7 @@ import org.junit.Test;
 
 public class TriangleTest {
 
-    /*@Test
+    @Test
     public void when00and40and04Then8() {
         Point a = new Point(0, 0);
         Point b = new Point(4, 0);
@@ -15,5 +15,5 @@ public class TriangleTest {
         Triangle triangle = new Triangle(a, b, c);
         double rsl = triangle.area();
         assertThat(rsl, closeTo(8, 0.001));
-    }*/
+    }
 }

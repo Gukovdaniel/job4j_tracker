@@ -13,7 +13,7 @@ public class ValidateInputTest {
                 new String[]{"one", "1"}
         );
         ValidateInput input = new ValidateInput(out, in);
-        int selected = input.askInt("Enter menu :");
+        int selected = input.askInt("Enter menu:");
         assertThat(selected).isEqualTo(1);
     }
 

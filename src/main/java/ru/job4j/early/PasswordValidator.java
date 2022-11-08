@@ -29,10 +29,3 @@ public class PasswordValidator {
         return password;
     }
 }
-
-//boolean result=false;
-//        char[] array=str.toCharArray();
-//        for(char x:array){
-//            if(Character.isUpperCase(x)){
-//                result=true;
-//                break;

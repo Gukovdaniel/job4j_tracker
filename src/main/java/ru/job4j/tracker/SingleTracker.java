@@ -10,7 +10,8 @@ public class SingleTracker {
     public static Tracker getInstance() {
         if (tracker == null) {
             tracker = new Tracker();
-        } return tracker;
+        }
+        return tracker;
     }
 
     public Item add(Item item) {
@@ -36,6 +37,4 @@ public class SingleTracker {
     public Item replace(int id, Item item) {
         return null;
     }
-
-
 }

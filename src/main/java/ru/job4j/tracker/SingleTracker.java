@@ -31,7 +31,7 @@ public class SingleTracker {
     }
 
     public Item[] findAll() {
-        return findAll();
+        return tracker.findAll();
     }
 
     public boolean replace(int id, Item item) {

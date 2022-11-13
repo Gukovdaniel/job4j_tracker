@@ -7,7 +7,7 @@ public class SingleTracker {
     private SingleTracker() {
     }
 
-    public static Tracker getInstance() {
+    public static Tracker gettInstance() {
         if (tracker == null) {
             tracker = new Tracker();
         }

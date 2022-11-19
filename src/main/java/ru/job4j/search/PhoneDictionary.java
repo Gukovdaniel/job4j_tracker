@@ -22,11 +22,10 @@ public class PhoneDictionary {
             if (person.getPhone().contains(key)) {
                 result.add(person);
             }
-            if (person.getAddress().contains(key)) {
+            else if (person.getAddress().contains(key)) {
                 result.add(person);
-            } else {
-                result.removeAll(result);
             }
+            persons.clear();
         }
         return result;
     }

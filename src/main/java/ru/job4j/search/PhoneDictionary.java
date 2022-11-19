@@ -15,18 +15,17 @@ public class PhoneDictionary {
         for (Person person : persons) {
             if (person.getName().contains(key)) {
                 result.add(person);
-            }
-            if (person.getSurname().contains(key)) {
+            } else if (person.getSurname().contains(key)) {
                 result.add(person);
-            }
-            if (person.getPhone().contains(key)) {
+            } else if (person.getPhone().contains(key)) {
                 result.add(person);
-            }
-            else if (person.getAddress().contains(key)) {
+            } else if (person.getAddress().contains(key)) {
                 result.add(person);
+            } else {
+                result.clear();
             }
-            persons.clear();
+            break;
         }
-        return result;
+            return result;
+        }
     }
-}

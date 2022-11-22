@@ -8,12 +8,10 @@ import java.util.Map;
 
         public boolean add(Citizen citizen) {
             boolean rsl = false;
-            for (String key : citizens.keySet()) {
-                if (!citizens.containsKey(key)) {
-                    citizens.put(citizen.getPassport(), citizen);
+            if (!citizens.containsKey(citizen.getPassport())) {
+                citizens.put(citizen.getPassport(), citizen);
                     rsl = true;
                 }
-            }
             return rsl;
         }
 

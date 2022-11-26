@@ -9,20 +9,17 @@ import java.util.Map;
         private final Map<User, List<Account>> users = new HashMap<>();
 
         public void addUser(User user) {
-            if (!users.containsKey(user)) {
-                users.put(user, new ArrayList<>());
-            }
+            users.putIfAbsent(user, new ArrayList<>());
         }
 
         public boolean deleteUser(String passport) {
-            users.remove(passport);
-            return false;
+           return (users.remove(new User(passport, "")) != null);
         }
 
         public void addAccount(String passport, Account account) {
             User user = findByPassport(passport);
-            if (!this.users.containsKey(account)) {
-                this.users.put(user, (List<Account>) account);
+            if (!user.equals(null) && users.get(user).contains(account)) {
+              users.put(user, (List<Account>) account);
             }
         }
 
@@ -38,18 +35,21 @@ import java.util.Map;
         public Account findByRequisite(String passport, String requisite) {
             User user = findByPassport(passport);
             if (!user.equals(null)) {
-                this.users.get(user).contains(requisite);
+                for (Account key : users.get(user)) {
+                    if (key.getRequisite().equals(requisite)) {
+                        return key;
+                    }
+                }
             }
                 return null;
             }
 
-        public boolean transferMoney(String srcPassport, String srcRequisite,
+            public boolean transferMoney(String srcPassport, String srcRequisite,
                                      String destPassport, String destRequisite, double amount) {
             boolean rsl = false;
             Account account = findByRequisite(srcPassport, srcRequisite);
             Account account1 = findByRequisite(destPassport, destRequisite);
-            User user1 = findByPassport(destPassport);
-            if (this.users.get(user1).contains(account1) && amount <= account.getBalance()) {
+            if (!account.equals(null) && !account1.equals(null) && amount <= account.getBalance()) {
                 account.setBalance(account.getBalance() - amount);
                 account1.setBalance(account1.getBalance() + amount);
                 rsl = true;

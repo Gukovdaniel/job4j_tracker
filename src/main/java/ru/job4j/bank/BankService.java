@@ -18,15 +18,18 @@ import java.util.Map;
 
         public void addAccount(String passport, Account account) {
             User user = findByPassport(passport);
-            if (user != null && users.get(user).contains(account)) {
-              users.put(user, (List<Account>) account);
+            if (user != null) {
+              List<Account> accounts = users.get(user);
+              if (!accounts.contains(account)) {
+                  accounts.add(account);
+              }
             }
         }
 
         public User findByPassport(String passport) {
             for (User key : users.keySet()) {
                 if (key.equals(passport)) {
-                    users.get(key);
+                    return key;
                 }
             }
             return null;

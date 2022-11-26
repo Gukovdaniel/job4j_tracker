@@ -18,7 +18,7 @@ import java.util.Map;
 
         public void addAccount(String passport, Account account) {
             User user = findByPassport(passport);
-            if (!user.equals(null) && users.get(user).contains(account)) {
+            if (user != null && users.get(user).contains(account)) {
               users.put(user, (List<Account>) account);
             }
         }
@@ -34,7 +34,7 @@ import java.util.Map;
 
         public Account findByRequisite(String passport, String requisite) {
             User user = findByPassport(passport);
-            if (!user.equals(null)) {
+            if (user != null) {
                 for (Account key : users.get(user)) {
                     if (key.getRequisite().equals(requisite)) {
                         return key;
@@ -49,7 +49,7 @@ import java.util.Map;
             boolean rsl = false;
             Account account = findByRequisite(srcPassport, srcRequisite);
             Account account1 = findByRequisite(destPassport, destRequisite);
-            if (!account.equals(null) && !account1.equals(null) && amount <= account.getBalance()) {
+            if (account != null && account1 != null && amount <= account.getBalance()) {
                 account.setBalance(account.getBalance() - amount);
                 account1.setBalance(account1.getBalance() + amount);
                 rsl = true;

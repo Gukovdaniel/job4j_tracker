@@ -37,7 +37,7 @@ public class ValidateInputTest {
         int selected = input.askInt("Enter menu:");
         assertThat(selected).isEqualTo(2);
         int selected1 = input.askInt("Enter menu:");
-        assertThat(selected).isEqualTo(1);
+        assertThat(selected1).isEqualTo(1);
     }
 
     @Test

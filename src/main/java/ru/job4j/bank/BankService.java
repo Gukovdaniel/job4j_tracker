@@ -28,7 +28,7 @@ import java.util.Map;
 
         public User findByPassport(String passport) {
             for (User key : users.keySet()) {
-                if (key.equals(passport)) {
+                if (key.getPassport().equals(passport)) {
                     return key;
                 }
             }

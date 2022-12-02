@@ -31,24 +31,17 @@ public class AnalyzeByMap {
     }
 
     public static List<Label> averageScoreBySubject(List<Pupil> pupils) {
-        List listA = new ArrayList();
-        double result = 0;
-        int count = 1;
+
+        Map<String, Integer> subject = new LinkedHashMap<>();
+        int result = 0;
         for (Pupil p : pupils) {
             for (Subject n : p.subjects()) {
                 result += n.score();
-                if (count < pupils.size()) {
-                    count++;
-                    break;
-                } else {
-                    Label label = new Label(n.name(), result / pupils.size());
-                    listA.add(label);
-                    result = 0;
-                    count = 1;
-                }
+                Label label = new Label(n.name(), result / pupils.size());
+                subject.getOrDefault(label, 0);
             }
         }
-        return listA;
+        return List.of();
     }
 
     public static Label bestStudent(List<Pupil> pupils) {

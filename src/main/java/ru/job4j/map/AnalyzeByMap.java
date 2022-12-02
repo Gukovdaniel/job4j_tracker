@@ -40,8 +40,8 @@ public class AnalyzeByMap {
                 subject.put(n.name(), result);
                 result = 0;
             }
-            //Label label = new Label(___, ___);
-                //listA.add(label);
+            /*Label label = new Label(___, ___);
+                listA.add(label);*/
         }
         return listA;
     }

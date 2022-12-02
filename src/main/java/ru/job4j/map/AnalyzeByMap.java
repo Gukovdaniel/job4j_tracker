@@ -31,18 +31,28 @@ public class AnalyzeByMap {
     }
 
     public static List<Label> averageScoreBySubject(List<Pupil> pupils) {
-
+        List listA = new ArrayList();
         Map<String, Integer> subject = new LinkedHashMap<>();
         int result = 0;
         for (Pupil p : pupils) {
             for (Subject n : p.subjects()) {
                 result += n.score();
-                Label label = new Label(n.name(), result / pupils.size());
-                subject.getOrDefault(label, 0);
+                subject.put(n.name(), result);
+                result = 0;
             }
-        }
-        return List.of();
+            //Label label = new Label(___, ___);
+                //listA.add(label);
+
+            }
+        return listA;
     }
+
+    //чтобы реализовать данный метод, нам необходимо будет собрать временную Map<String, Integer>
+    // (в качестве реализации используем LinkedHashMap) - в качестве ключа используем название предмета, в
+    // качестве значения - сумма баллов по этому предмету, которую мы получим у каждого ученика. Далее мы перебираем
+    // пары ключ-значение в цикле и на их основе создаем объекты типа Label - в качестве первого параметра передаем ключ
+    // карты, в качестве второго - значение карты разделенное на количество учеников. Созданный объект добавляем в
+    // результирующий список, его мы и вернем в конце метода.
 
     public static Label bestStudent(List<Pupil> pupils) {
         return null;

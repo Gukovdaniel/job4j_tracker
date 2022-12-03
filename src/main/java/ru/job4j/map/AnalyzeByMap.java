@@ -43,7 +43,7 @@ public class AnalyzeByMap {
         }
             List<Label> result = new ArrayList<>();
            for (String s : temp.keySet()) {
-               temp.getOrDefault(s,0);
+               temp.getOrDefault(s, 0);
                 result.add(new Label(s, temp.get(s) / pupils.size()));
             }
             return result;

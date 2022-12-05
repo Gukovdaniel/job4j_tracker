@@ -30,7 +30,7 @@ public class Tracker {
         int rsl = -1;
         for (int index = 0; index < items.size(); index++) {
             items.get(index);
-            if (index == id) {
+            if (items.get(index).getId() == id) {
                 rsl = index;
                 break;
             }

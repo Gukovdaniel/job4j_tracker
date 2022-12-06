@@ -7,10 +7,10 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-import static org.hamcrest.CoreMatchers.is;
-import static org.junit.Assert.assertThat;
+import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
+import static org.junit.jupiter.api.Assertions.*;
 
-class ItemAscByNameTest extends TestCase {
+class ItemTest {
 
     @Test
     public void compareAscByName() {
@@ -23,7 +23,7 @@ class ItemAscByNameTest extends TestCase {
         expected.add(new Item(1, "Daniil"));
         expected.add(new Item(3, "Nikola"));
         expected.add(new Item(2, "Yan"));
-        assertThat(items, is(expected));
+        assertThat(items).isEqualTo(expected);
     }
 
     @Test
@@ -37,6 +37,7 @@ class ItemAscByNameTest extends TestCase {
         expected.add(new Item(2, "Yan"));
         expected.add(new Item(3, "Nikola"));
         expected.add(new Item(1, "Daniil"));
-        assertThat(items, is(expected));
+        assertThat(items).isEqualTo(expected);
     }
+
 }

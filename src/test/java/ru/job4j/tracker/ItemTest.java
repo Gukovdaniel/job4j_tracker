@@ -1,6 +1,5 @@
 package ru.job4j.tracker;
 
-import junit.framework.TestCase;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
@@ -8,7 +7,6 @@ import java.util.Collections;
 import java.util.List;
 
 import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
-import static org.junit.jupiter.api.Assertions.*;
 
 class ItemTest {
 
@@ -39,5 +37,4 @@ class ItemTest {
         expected.add(new Item(1, "Daniil"));
         assertThat(items).isEqualTo(expected);
     }
-
 }

@@ -3,9 +3,17 @@ package ru.job4j.bank;
 import java.util.Objects;
 
 public class Account {
+    /**
+     * инициализация полей реквизиты и балланс
+     */
     private String requisite;
     private double balance;
 
+    /**
+     * Конструктор по которому будем создавать модель банковского счета
+     * @param requisite - реквизиты счета
+     * @param balance - баланс
+     */
     public Account(String requisite, double balance) {
         this.requisite = requisite;
         this.balance = balance;

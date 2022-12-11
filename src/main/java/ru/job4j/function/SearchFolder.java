@@ -8,12 +8,10 @@ public class SearchFolder {
     public static List<Folder> filter(List<Folder> list, Predicate<Folder> pred) {
         List<Folder> rsl = new ArrayList<>();
         for (Folder f : list) {
-            Predicate<Folder> size = folder -> f.getSize() > 100;
-            Predicate<Folder> name = folder -> f.getName().contains("bug");
-            size.test(f);
-            name.test(f);
-            rsl.add(f);
+            if (pred.test(f)) {
+                rsl.add(f);
+            }
         }
-        return new ArrayList<>();
+        return rsl;
     }
 }

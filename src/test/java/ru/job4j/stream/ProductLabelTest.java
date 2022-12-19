@@ -3,10 +3,7 @@ package ru.job4j.stream;
 import org.junit.jupiter.api.Test;
 
 import java.util.Arrays;
-import java.util.Collections;
 import java.util.List;
-
-import static org.assertj.core.api.Assertions.assertThat;
 
 public class ProductLabelTest {
     @Test
@@ -24,10 +21,6 @@ public class ProductLabelTest {
                 new Product("cherry", 150, 10, 8),
                 new Product("watermelon", 70, 7, 7)
         );
-        ProductLabel generator = new ProductLabel();
-        List<String> strings = generator.generateLabels(products);
-        List<String> expected = Arrays.asList(one.toString(), two.toString(),
-                three.toString(), four.toString());
-        assertThat(strings).containsAll(expected);
+
     }
 }

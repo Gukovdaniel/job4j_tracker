@@ -16,6 +16,7 @@ public class SchoolTest {
                 new Student(40, "Surname4"),
                 new Student(50, "Surname5"),
                 new Student(70, "Surname7"),
+                new Student(90, "Surname9"),
                 new Student(90, "Surname9")
         );
         School sc = new School();

@@ -8,13 +8,10 @@ public class ListToMap {
 
     public static Map<String, Student> convert(List<Student> list) {
         return list.stream()
-                .distinct()
                 .collect(Collectors.toMap(
                 Student::getSurname,
                         obj -> obj,
-        (e, r) -> {
-                return e.equals(r) ? e : r;
-        }
+        (e, r) -> e
                 ));
     }
 }

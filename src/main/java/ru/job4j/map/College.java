@@ -11,7 +11,7 @@ public class College {
         this.students = students;
     }
 
-    public Optional <Student> findByAccount(String account) {
+    public Optional<Student> findByAccount(String account) {
         Optional<Student> rsl = Optional.empty();
         for (Student student : students.keySet()) {
             if (student.account().equals(account)) {
@@ -22,17 +22,17 @@ public class College {
         return rsl;
     }
 
-    public Optional <Subject> findBySubjectName(String account, String name) {
+    public Optional<Subject> findBySubjectName(String account, String name) {
         Optional<Subject> rsl = Optional.empty();
         Optional<Student> a = findByAccount(account);
-        if (a != null ) {
-            if (a.get().name().equals(name)) {
-                rsl = Optional.of();
-                break;
+        if (a.isPresent()) {
+            for (Subject subject : students.get(a)) {
+                if (subject.name().equals(name)) {
+                    rsl = Optional.of(subject);
+                    break;
+                }
             }
         }
         return rsl;
     }
-    }
-
-
+}

@@ -2,33 +2,46 @@ package ru.job4j.collections;
 
 import java.util.*;
 
+/**
+ * List<String> departments = new ArrayList<>();+
+ *         for (List<String> branch : branches) {+
+ *             StringBuilder string = new StringBuilder(); +
+ *             for (int i = 0; i < branch.size(); i++) {
+ *                 string.append(branch.get(i));
+ *                 if (i != branch.size() - 1) {
+ *                     string.append("\\");
+ *                 }
+ *             }
+ *             departments.add(string.toString());
+ *         }
+ *         return departments;
+ */
+
 public class Departments {
     public static List<String> fillGaps(List<String> deps) {
         Set<String> tmp = new LinkedHashSet<>();
         for (String value : deps) {
             String start = "";
+            String[] array = value.split("/");
             for (String el : value.split("/")) {
-                tmp.add(start + "/" + el);
+                if (array[0].equals(el)) {
+                    tmp.add(el);
+                    start += el;
+                } else {
+                    start += "/" + el;
+                    tmp.add(start);
+                }
             }
         }
+
         return new ArrayList<>(tmp);
     }
 
     public static void sortAsc(List<String> orgs) {
-        orgs.sort(new Comparator<String>() {
-            @Override
-            public int compare(String o1, String o2) {
-                return o1.compareTo(o2);
-            }
-        });
+        Collections.sort(orgs);
     }
 
     public static void sortDesc(List<String> orgs) {
-        orgs.sort(new Comparator<String>() {
-            @Override
-            public int compare(String o1, String o2) {
-                return o2.compareTo(o1);
-            }
-        });
+        Collections.sort(orgs, new DepDescComp());
     }
 }

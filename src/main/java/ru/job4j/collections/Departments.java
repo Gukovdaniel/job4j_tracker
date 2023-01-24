@@ -2,21 +2,6 @@ package ru.job4j.collections;
 
 import java.util.*;
 
-/**
- * List<String> departments = new ArrayList<>();+
- *         for (List<String> branch : branches) {+
- *             StringBuilder string = new StringBuilder(); +
- *             for (int i = 0; i < branch.size(); i++) {
- *                 string.append(branch.get(i));
- *                 if (i != branch.size() - 1) {
- *                     string.append("\\");
- *                 }
- *             }
- *             departments.add(string.toString());
- *         }
- *         return departments;
- */
-
 public class Departments {
     public static List<String> fillGaps(List<String> deps) {
         Set<String> tmp = new LinkedHashSet<>();

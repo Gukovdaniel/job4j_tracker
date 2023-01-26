@@ -4,10 +4,10 @@ import java.util.Comparator;
 
 /**
  * -  делим входящие строки с помощью split() по /, помещаем результат в переменные
- *
+ * <p>
  * - сравниваем первые элементы полученных массивов по убыванию с помощью compareTo(),
  * результат помещаем в переменную rsl
- *
+ * <p>
  * - если rsl равен 0 - то возвращаем такое сравнение: o1.compareTo(o2) - иначе - переменную rsl
  */
 
@@ -18,5 +18,5 @@ public class DepDescComp implements Comparator<String> {
         String[] o2arr = o2.split("/");
         int rsl = o2arr[0].compareTo(o1arr[0]);
         return rsl == 0 ? o1.compareTo(o2) : rsl;
-        }
     }
+}
